@@ -1,0 +1,2 @@
+# Update AV signatures every 12 hours
+0 0,12 * * * root freshclam

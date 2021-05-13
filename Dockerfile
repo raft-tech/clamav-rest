@@ -32,6 +32,8 @@ RUN cd /go/src/clamav-rest && go build -v
 COPY entrypoint.sh /usr/bin/
 RUN mv /go/src/clamav-rest/clamav-rest /usr/bin/ && rm -Rf /go/src/clamav-rest
 
+COPY clamav-freshclam.cron /etc/cron.d/clamav-freschclam
+
 EXPOSE 9000
 EXPOSE 9443
 
